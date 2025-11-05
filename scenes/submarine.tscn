@@ -6,15 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(32, 23)
 
-[node name="submarine" type="Node2D" groups=["player"]]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="submarine" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_r3h5y")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_cjhfg")
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_1bvp3")
