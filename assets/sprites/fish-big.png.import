@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6gtc7nqwljd2"
-path="res://.godot/imported/fish-big.png-c90ad962d70fa9003d4405677790582d.ctex"
+path="res://.godot/imported/fish-big.png-ca1b81017a89766bea914571c20b1d72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/underwater-diving-files/PNG/enemies/fish-big.png"
-dest_files=["res://.godot/imported/fish-big.png-c90ad962d70fa9003d4405677790582d.ctex"]
+source_file="res://assets/sprites/fish-big.png"
+dest_files=["res://.godot/imported/fish-big.png-ca1b81017a89766bea914571c20b1d72.ctex"]
 
 [params]
 
