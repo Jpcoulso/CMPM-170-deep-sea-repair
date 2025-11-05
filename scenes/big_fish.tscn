@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc2umqf8p8c3e"]
+[gd_scene load_steps=4 format=3 uid="uid://cdokrgsvkjo3q"]
 
 [ext_resource type="Script" uid="uid://c0ui43nceps05" path="res://scripts/big_fish.gd" id="1_me2ul"]
-[ext_resource type="SpriteFrames" uid="uid://d0aooycs8yw8" path="res://assets/sprites/bigFishIdle.tres" id="2_me2ul"]
+[ext_resource type="SpriteFrames" uid="uid://cpk0x6jtnk7dr" path="res://assets/sprites/bigFishIdle.tres" id="2_me2ul"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5lic5"]
 radius = 19.235384

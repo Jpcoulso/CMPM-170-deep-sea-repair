@@ -22,3 +22,9 @@ func _physics_process(delta: float) -> void:
 	# Optional: rotate submarine toward movement direction
 	if velocity.length() > 10:
 		rotation = velocity.angle()
+		
+	if velocity.x < 0:
+		$Sprite2D.flip_v = true;
+	else:
+		$Sprite2D.flip_v = false;
+		

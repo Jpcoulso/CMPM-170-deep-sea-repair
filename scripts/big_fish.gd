@@ -32,3 +32,8 @@ func _physics_process(_delta: float) -> void:
 	# Optional: face player
 	if velocity.length() > 5:
 		rotation = velocity.angle()
+		
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_v = true;
+	else:
+		$AnimatedSprite2D.flip_v = false;
