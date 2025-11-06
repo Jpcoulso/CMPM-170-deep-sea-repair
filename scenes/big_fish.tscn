@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdokrgsvkjo3q"]
+[gd_scene load_steps=5 format=3 uid="uid://cdokrgsvkjo3q"]
 
 [ext_resource type="Script" uid="uid://c0ui43nceps05" path="res://scripts/big_fish.gd" id="1_me2ul"]
 [ext_resource type="SpriteFrames" uid="uid://cpk0x6jtnk7dr" path="res://assets/sprites/bigFishIdle.tres" id="2_me2ul"]
@@ -6,14 +6,23 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_5lic5"]
 radius = 19.235384
 
-[node name="bigFish" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_me2ul"]
+radius = 19.026299
+
+[node name="bigFish" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_me2ul")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_me2ul")
 animation = &"idle"
-frame_progress = 0.754933
+
+[node name="CollisionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+position = Vector2(4, 4)
+shape = SubResource("CircleShape2D_5lic5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 4)
-shape = SubResource("CircleShape2D_5lic5")
+shape = SubResource("CircleShape2D_me2ul")
+debug_color = Color(0.19426653, 0.62264425, 0.45070165, 0.41960785)

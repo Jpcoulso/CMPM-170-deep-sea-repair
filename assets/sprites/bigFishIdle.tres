@@ -1,6 +1,31 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://cpk0x6jtnk7dr"]
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://cpk0x6jtnk7dr"]
 
+[ext_resource type="Texture2D" uid="uid://c5g3kvrqfje7e" path="res://assets/underwater-diving-files/PNG/FX/enemy-death.png" id="1_7i8pp"]
 [ext_resource type="Texture2D" uid="uid://c6gtc7nqwljd2" path="res://assets/sprites/fish-big.png" id="1_1704x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmdao"]
+atlas = ExtResource("1_7i8pp")
+region = Rect2(0, 0, 52, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti6ks"]
+atlas = ExtResource("1_7i8pp")
+region = Rect2(52, 0, 52, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmq06"]
+atlas = ExtResource("1_7i8pp")
+region = Rect2(104, 0, 52, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f56qp"]
+atlas = ExtResource("1_7i8pp")
+region = Rect2(156, 0, 52, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v52rj"]
+atlas = ExtResource("1_7i8pp")
+region = Rect2(208, 0, 52, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1obpt"]
+atlas = ExtResource("1_7i8pp")
+region = Rect2(260, 0, 52, 53)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_me2ul"]
 atlas = ExtResource("1_1704x")
@@ -20,6 +45,29 @@ region = Rect2(162, 0, 54, 49)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmdao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti6ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmq06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f56qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v52rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1obpt")
+}],
+"loop": false,
+"name": &"death",
+"speed": 11.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_me2ul")

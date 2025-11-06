@@ -1,18 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://buywlekkjmirb"]
+[gd_scene load_steps=7 format=3 uid="uid://buywlekkjmirb"]
 
 [ext_resource type="Script" uid="uid://do1ssaowawy00" path="res://scripts/repair_beacon.gd" id="1_unxym"]
 [ext_resource type="Texture2D" uid="uid://c7ab7x5xsaho2" path="res://assets/underwater-diving-files/PNG/enemies/mine.png" id="2_54duj"]
+[ext_resource type="SpriteFrames" uid="uid://3hylvs7g0gsc" path="res://assets/explosion.tres" id="3_54duj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_54duj"]
+radius = 19.026299
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_00ixj"]
-radius = 46.270943
+radius = 59.0
 
-[node name="Beacon" type="Area2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_eguf2"]
+radius = 21.0
+
+[node name="Beacon" type="CharacterBody2D" groups=["beacons"]]
 script = ExtResource("1_unxym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_54duj")
+debug_color = Color(0.1462349, 0.6326893, 0.37961873, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_54duj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -8)
+sprite_frames = ExtResource("3_54duj")
+animation = &"explosion"
+
+[node name="repaireArea" type="Area2D" parent="."]
+
+[node name="repairZone" type="CollisionShape2D" parent="repaireArea"]
 shape = SubResource("CircleShape2D_00ixj")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="detonateZone" type="Area2D" parent="."]
+
+[node name="detonateShape" type="CollisionShape2D" parent="detonateZone"]
+shape = SubResource("CircleShape2D_eguf2")
+debug_color = Color(0.89578307, 0.24699381, 0.51615447, 0.41960785)
